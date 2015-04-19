@@ -1,10 +1,18 @@
-#Use Jenkins on Ubuntu
+#Jenkins Docker Image
 
-##build
+###Build
 ```
-$ docker build -t ubuntu/takeharu:latest .
+$ docker build -t <ImageName> .
 ```
-
+###Start
 ```
-$ docker run -d --name jenkins ubuntu/takeharu
+$ docker run -d --name jenkins -p 8080:8080 takeharu/ubuntu-jenkins
+```
+###Stop
+```
+$ docker stop jenkins
+```
+###Restart
+```
+$ docker start jenkins
 ```
